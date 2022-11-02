@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="operatorBtnSytle" parent="Base.Widget.AppCompat.Button">
+        <item name="android:background">@drawable/round_button</item>
+        <item name="android:textColor">@color/orange</item>
+    </style>
+</resources>

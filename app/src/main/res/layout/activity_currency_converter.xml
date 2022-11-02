@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CurrencyConverterActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:background="@color/white"
+            android:onClick="launchCalculator"
+            android:src="@drawable/left_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="170dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical"
+            android:text="@string/currency_activity_text"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp">
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="40dp">
+
+            <Spinner
+                android:id="@+id/currencies_list_1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:onClick="updateExchangeSourceLayout"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/currency_value_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:text="1"
+                    android:textColor="@color/orange" />
+
+                <TextView
+                    android:id="@+id/currency_name_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="10dp"
+                    android:text="United States Dollar"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </TableRow>
+
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <Spinner
+                android:id="@+id/currencies_list_2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:onClick="updateExchangeSourceLayout"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/currency_value_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:text="1"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/currency_name_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="10dp"
+                    android:text="United States Dollar"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Exchange rates are provided by API LAYER"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="15dp"
+        android:background="@color/light_grey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="290dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp">
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3">
+
+                <Button
+                    android:id="@+id/btn_7"
+                    android:layout_width="0dp"
+                    android:layout_height="75dp"
+                    android:layout_weight="0.25"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:onClick="getElement"
+                    android:text="7" />
+
+                <Button
+                    android:id="@+id/btn_8"
+                    android:layout_width="0dp"
+                    android:layout_height="75dp"
+                    android:layout_weight="0.25"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:onClick="getElement"
+                    android:text="8" />
+
+                <Button
+                    android:id="@+id/btn_9"
+                    android:layout_width="0dp"
+                    android:layout_height="75dp"
+                    android:layout_weight="0.25"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:onClick="getElement"
+                    android:text="9" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3">
+
+                <Button
+                    android:id="@+id/btn_4"
+                    android:layout_width="0dp"
+                    android:layout_height="75dp"
+                    android:layout_weight="0.25"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:onClick="getElement"
+                    android:text="4" />
+
+                <Button
+                    android:id="@+id/btn_5"
+                    android:layout_width="0dp"
+                    android:layout_height="75dp"
+                    android:layout_weight="0.25"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:onClick="getElement"
+                    android:text="5" />
+
+                <Button
+                    android:id="@+id/btn_6"
+                    android:layout_width="0dp"
+                    android:layout_height="75dp"
+                    android:layout_weight="0.25"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:onClick="getElement"
+                    android:text="6" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3">
+
+                <Button
+                    android:id="@+id/btn_1"
+                    android:layout_width="0dp"
+                    android:layout_height="75dp"
+                    android:layout_weight="0.25"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:onClick="getElement"
+                    android:text="1" />
+
+                <Button
+                    android:id="@+id/btn_2"
+                    android:layout_width="0dp"
+                    android:layout_height="75dp"
+                    android:layout_weight="0.25"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:onClick="getElement"
+                    android:text="2" />
+
+                <Button
+                    android:id="@+id/btn_3"
+                    android:layout_width="0dp"
+                    android:layout_height="75dp"
+                    android:layout_weight="0.25"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:onClick="getElement"
+                    android:text="3" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="fill">
+
+                <Button
+                    android:id="@+id/btn_nothing"
+                    android:layout_width="0dp"
+                    android:layout_height="75dp"
+                    android:layout_weight="0.25"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:text=" " />
+
+                <Button
+                    android:id="@+id/btn_0"
+                    android:layout_width="0dp"
+                    android:layout_height="75dp"
+                    android:layout_weight="0.25"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:onClick="getElement"
+                    android:text="0" />
+
+                <Button
+                    android:id="@+id/btn_dot"
+                    android:layout_width="0dp"
+                    android:layout_height="75dp"
+                    android:layout_weight="0.25"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:onClick="getElement"
+                    android:text="." />
+            </TableRow>
+        </TableLayout>
+
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="match_parent" />
+
+        <GridLayout
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_cancel"
+                style="@style/operatorBtnSytle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="0.5"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/curve_btn"
+                android:onClick="clear"
+                android:text="C" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_delete"
+                style="@style/operatorBtnSytle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="0.5"
+                android:background="@drawable/curve_btn"
+                android:onClick="delete"
+                android:text="DEL" />
+        </GridLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

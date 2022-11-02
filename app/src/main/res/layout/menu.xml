@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp">
+
+    <ImageButton
+        android:id="@+id/calculator_activity"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="@dimen/activity_btn_width"
+        android:layout_height="@dimen/activity_btn_height"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="50dp"
+        android:background="@color/white"
+        android:src="@drawable/calculate" />
+
+    <ImageButton
+        android:id="@+id/currency_activity"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="@dimen/activity_btn_width"
+        android:layout_height="@dimen/activity_btn_height"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:layout_toStartOf="@+id/history_activity"
+        android:layout_toEndOf="@+id/calculator_activity"
+        android:background="@color/white"
+        android:src="@drawable/currency" />
+
+    <ImageButton
+        android:id="@+id/history_activity"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="@dimen/activity_btn_width"
+        android:layout_height="@dimen/activity_btn_height"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="50dp"
+        android:background="@color/white"
+        android:src="@drawable/history" />
+
+
+</RelativeLayout>
