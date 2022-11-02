@@ -1,2 +1,2 @@
-# calculator_currency_exchange_android
+# Kalculator
 An Android calculator and currency exchange app
