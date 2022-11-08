@@ -21,7 +21,7 @@ par la calculatrice.
 
 ![accueil](https://i.postimg.cc/Nj2bX9xf/launch.png)
 FIGURE3 – Page d’accueil de l’application
-```
+
 
 ![calcul](https://i.postimg.cc/prNP2nkh/calcul.png)
 FIGURE4 – Exemple de calcul réalisable par la calculette
@@ -53,9 +53,9 @@ L’envoi des requêtes a nécessité l’utilisation de **Threads** (sans ça i
 ce qui fait qu’il y a parfois des temps de latence entre la demande de l’utilisation et la
 réponse de l’API.
 
-```
+
 ![currency](https://i.postimg.cc/bwR0kxtP/currency.png)
 
 FIGURE9 – Convertisseur de devise
-```
+
 
