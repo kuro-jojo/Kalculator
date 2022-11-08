@@ -5,7 +5,7 @@ Une application android permettant de faire des opérations arithmétiques et la
 
 ## 1 Diagramme de classe
 
-```
+
 ![diagramme de classe](https://i.postimg.cc/g0qVyvLd/Kalculator.jpg)
 FIGURE2 – Diagramme de classe du convertisseur
 
